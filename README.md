@@ -112,3 +112,17 @@ The four plots that you will need to construct are shown below.
 
 ![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
 
+## Instructions
+
+Download all 5 R files: ExData_project1.R, plot1.R, plot2.R, plot3.R and plot4.R to the same directory.
+
+1. ExData_project1.R downloads the datafile if it doesn't already exist in current directory.
+   It prepares a tidyData data frame with data for dates 2007-02-01 and 2007-02-01 (yyyy-mm-dd).
+
+2. In R-Studio or R-console, run plot1.R to create plot1.png in current directory.
+
+3. Similarly, Run plot2.R to create plot2.png
+
+4. Run plot3.R to create plot3.png
+
+5. Run plot4.R to create plot4.png
