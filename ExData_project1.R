@@ -1,15 +1,24 @@
 ## Exploratory Data - Project 1
 ## Annie Flippo
 
-# Assumption - the data file has been downloaded and unzip to the current working directory
-
-# Set working directory
 setwd(".")
 
-# Data Frame - read partial file to include up to 2007-02-01 data
+# If datafile doesn't exist, download and unzip it
+if (!file.exists("./household_power_consumption.txt")) {
+        # Download data zip file if it doesn't exist
+        if (!file.exists("./exdata-data-household_power_consumption.zip")) {
+                fileUrl <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
+                download.file(fileUrl, destfile = c("./exdata-data-household_power_consumption.zip"), method = "curl")        
+        }
+        unzip ("./exdata-data-household_power_consumption.zip")
+}
+
+# Data Frame
 myData <- read.table("./household_power_consumption.txt", sep=";", header=TRUE, na.strings='?', nrows=70000)
 myData[,1] <- as.character(myData[,1])
 myData[,2] <- as.character(myData[,2])
+
+#View(myData)
 
 # Create tidy data with only data needed and in useable format
 tidyData <- myData
